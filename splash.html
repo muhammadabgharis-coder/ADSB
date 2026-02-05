@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Datang - Andal Dinamik</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #0a74da;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    <h1>SELAMAT DATANG DI ANDAL DINAMIK</h1>
+
+    <script>
+        setTimeout(() => {
+            window.location.href = "index.html";
+        }, 3000);
+    </script>
+</body>
+</html>
