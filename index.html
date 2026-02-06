@@ -17,7 +17,7 @@
 .neon-wrap::before{
     content:"";
     position:absolute;
-    inset:-6px; /* tepi neon keluar sikit */
+    inset:-6px;
     background:linear-gradient(
         45deg,
         #22d3ee,
@@ -39,7 +39,7 @@
 }
 
 .neon-wrap:hover{
-    transform:translateY(-12px) scale(1.02);
+    transform:translateY(-12px) scale(1.03);
 }
 
 @keyframes neonSpin{
@@ -52,9 +52,9 @@
 
 <body style="margin:0; font-family:'Segoe UI', sans-serif; background:#f1f5f9;">
 
-<!-- HERO -->
-<div style="
-    height:80vh;
+<!-- HERO SECTION -->
+<section style="
+    height:90vh;
     background: linear-gradient(135deg,#0a74da,#00c6ff);
     display:flex;
     align-items:center;
@@ -62,17 +62,23 @@
     text-align:center;
     color:white;
 ">
-    <div>
-        <h1 style="font-size:3rem;letter-spacing:2px;margin-bottom:15px;">ANDAL DINAMIK</h1>
-        <p style="font-size:1.2rem;margin-bottom:30px;opacity:0.9;">
-            Solusi Inovatif • Profesional • Dipercayai
+    <div style="max-width:800px;">
+        <h1 style="font-size:3.5rem; letter-spacing:2px; margin-bottom:20px;">ANDAL DINAMIK</h1>
+        <p style="font-size:1.3rem; margin-bottom:30px; opacity:0.9;">
+            Solusi Inovatif • Profesional • Dipercayai • Meningkatkan Perniagaan Anda
         </p>
-        <a href="about.html" style="
-            background:#ffd700;color:#333;padding:12px 30px;border-radius:30px;text-decoration:none;font-weight:bold;display:inline-block;">
-            Kenali Kami
-        </a>
+        <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+            <a href="about.html" style="
+                background:#ffd700;color:#333;padding:14px 35px;border-radius:30px;text-decoration:none;font-weight:bold;">
+                Kenali Kami
+            </a>
+            <a href="contact.html" style="
+                background:#22d3ee;color:white;padding:14px 35px;border-radius:30px;text-decoration:none;font-weight:bold;">
+                Hubungi Kami
+            </a>
+        </div>
     </div>
-</div>
+</section>
 
 <!-- NAVIGATION -->
 <nav style="text-align:center; padding:16px; background:#1e293b;">
@@ -84,22 +90,21 @@
 </nav>
 
 <!-- FEATURE BOXES -->
-<div class="container" style="max-width:1100px; margin:60px auto; padding:0 20px;">
-    <h2 style="text-align:center; font-size:2.2rem; margin-bottom:40px;">Kenali Andal Dinamik</h2>
-
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px;">
+<section style="max-width:1100px; margin:60px auto; padding:0 20px;">
+    <h2 style="text-align:center; font-size:2.4rem; margin-bottom:50px;">Kenali Andal Dinamik</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:30px;">
 
         <!-- INOVATIF -->
         <div class="neon-wrap">
             <div style="
                 background:white;
-                padding:30px;
-                border-radius:16px;
-                box-shadow:0 12px 28px rgba(0,0,0,0.1);
+                padding:35px;
+                border-radius:18px;
+                box-shadow:0 14px 32px rgba(0,0,0,0.12);
                 text-align:center;
             ">
                 <h3>🚀 Inovatif</h3>
-                <p>Teknologi dan idea kreatif untuk masa depan perniagaan.</p>
+                <p>Teknologi dan idea kreatif untuk masa depan perniagaan anda.</p>
             </div>
         </div>
 
@@ -107,13 +112,13 @@
         <div class="neon-wrap">
             <div style="
                 background:white;
-                padding:30px;
-                border-radius:16px;
-                box-shadow:0 12px 28px rgba(0,0,0,0.1);
+                padding:35px;
+                border-radius:18px;
+                box-shadow:0 14px 32px rgba(0,0,0,0.12);
                 text-align:center;
             ">
                 <h3>🤝 Profesional</h3>
-                <p>Pasukan berpengalaman dengan standard kerja tinggi.</p>
+                <p>Pasukan berpengalaman dengan standard kerja tinggi dan result yang boleh dipercayai.</p>
             </div>
         </div>
 
@@ -121,27 +126,67 @@
         <div class="neon-wrap">
             <div style="
                 background:white;
-                padding:30px;
-                border-radius:16px;
-                box-shadow:0 12px 28px rgba(0,0,0,0.1);
+                padding:35px;
+                border-radius:18px;
+                box-shadow:0 14px 32px rgba(0,0,0,0.12);
                 text-align:center;
             ">
                 <h3>🏆 Berkualiti</h3>
-                <p>Fokus kepada kepuasan pelanggan dan hasil terbaik.</p>
+                <p>Fokus kepada kepuasan pelanggan dan hasil terbaik setiap masa.</p>
             </div>
         </div>
 
     </div>
-</div>
+</section>
+
+<!-- ABOUT RINGKAS -->
+<section style="max-width:1000px; margin:80px auto; padding:0 20px;">
+    <div style="
+        background:white;
+        padding:45px;
+        border-radius:18px;
+        box-shadow:0 18px 40px rgba(0,0,0,0.12);
+        text-align:center;
+    ">
+        <h2 style="margin-bottom:20px;">Tentang Andal Dinamik</h2>
+        <p style="font-size:1.05rem; line-height:1.8; color:#555;">
+            Andal Dinamik ditubuhkan untuk menyediakan penyelesaian inovatif dan strategik kepada semua jenis perniagaan.
+            Kami menekankan <strong>inovasi, profesionalisme, dan kualiti</strong> dalam setiap projek. Kepuasan pelanggan adalah keutamaan kami.
+        </p>
+    </div>
+</section>
+
+<!-- TESTIMONIALS (DUMMY) -->
+<section style="max-width:1100px; margin:80px auto 60px; padding:0 20px;">
+    <h2 style="text-align:center; font-size:2.2rem; margin-bottom:50px;">Apa Kata Klien Kami</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px;">
+
+        <div style="background:white; padding:30px; border-radius:18px; box-shadow:0 12px 28px rgba(0,0,0,0.12); text-align:center;">
+            <p>"Kerja Andal Dinamik sangat profesional dan hasilnya memuaskan!"</p>
+            <strong>- Ahmad, CEO TechCorp</strong>
+        </div>
+
+        <div style="background:white; padding:30px; border-radius:18px; box-shadow:0 12px 28px rgba(0,0,0,0.12); text-align:center;">
+            <p>"Idea kreatif mereka sangat membantu syarikat kami berkembang."</p>
+            <strong>- Siti, Founder Startup</strong>
+        </div>
+
+        <div style="background:white; padding:30px; border-radius:18px; box-shadow:0 12px 28px rgba(0,0,0,0.12); text-align:center;">
+            <p>"Perkhidmatan Andal Dinamik sangat boleh dipercayai dan tepat masa."</p>
+            <strong>- Lim, Manager BizDev</strong>
+        </div>
+
+    </div>
+</section>
 
 <!-- FOOTER -->
 <footer style="
     background:#0f172a;
     color:#c7d2fe;
     text-align:center;
-    padding:25px;
+    padding:35px 20px;
 ">
-    <p>© 2026 Andal Dinamik</p>
+    <p>© 2026 Andal Dinamik | Email: info@andaldinamik.com | Phone: +60 12-345 6789</p>
 </footer>
 
 </body>
