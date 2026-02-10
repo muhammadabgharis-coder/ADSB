@@ -91,27 +91,84 @@ Contact Us
 </section>
 
 <!-- SERVICES -->
-<section id="services" style="background:#f8fafc;color:#020617;padding:90px 40px;">
-<h2 class="fade-box" style="text-align:center;font-size:2.6rem;margin-bottom:60px;">
+<section id="services" style="background:#f8fafc;color:#020617;padding:110px 40px;">
+<h2 class="fade-box" style="
+text-align:center;
+font-size:2.8rem;
+margin-bottom:14px;
+">
 What We Do
 </h2>
 
+<p class="fade-box" style="
+text-align:center;
+max-width:680px;
+margin:0 auto 70px;
+color:#475569;
+font-size:1.05rem;
+">
+Kami menyediakan solusi menyeluruh berasaskan teknologi, profesionalisme dan kualiti bertaraf industri.
+</p>
+
 <div style="
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:40px;
 max-width:1200px;
 margin:auto;
 ">
-<div class="fade-box" style="background:white;padding:40px;border-radius:16px;">
+
+<!-- CARD 1 -->
+<div class="fade-box service-card" style="
+background:white;
+padding:50px 40px;
+border-radius:22px;
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
+transition:0.35s;
+">
+<div style="font-size:2.6rem;margin-bottom:18px;">💡</div>
+<h3 style="margin-bottom:14px;font-size:1.4rem;">
 Technology Solutions
+</h3>
+<p style="color:#475569;line-height:1.6;">
+Reka bentuk sistem, automasi dan penyelesaian digital untuk meningkatkan kecekapan operasi organisasi.
+</p>
 </div>
-<div class="fade-box" style="background:white;padding:40px;border-radius:16px;">
+
+<!-- CARD 2 -->
+<div class="fade-box service-card" style="
+background:white;
+padding:50px 40px;
+border-radius:22px;
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
+transition:0.35s;
+">
+<div style="font-size:2.6rem;margin-bottom:18px;">🧠</div>
+<h3 style="margin-bottom:14px;font-size:1.4rem;">
 Professional Services
+</h3>
+<p style="color:#475569;line-height:1.6;">
+Khidmat perundingan, sokongan teknikal dan pengurusan projek berstandard korporat.
+</p>
 </div>
-<div class="fade-box" style="background:white;padding:40px;border-radius:16px;">
+
+<!-- CARD 3 -->
+<div class="fade-box service-card" style="
+background:white;
+padding:50px 40px;
+border-radius:22px;
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
+transition:0.35s;
+">
+<div style="font-size:2.6rem;margin-bottom:18px;">🛡️</div>
+<h3 style="margin-bottom:14px;font-size:1.4rem;">
 Quality Assurance
+</h3>
+<p style="color:#475569;line-height:1.6;">
+Pemantauan, pengujian dan jaminan kualiti bagi memastikan prestasi sistem sentiasa optimum.
+</p>
 </div>
+
 </div>
 </section>
 
@@ -124,29 +181,38 @@ text-align:center;">
 © 2026 Andal Dinamik
 </footer>
 
-<!-- JAVASCRIPT FADE-IN (TANPA CSS) -->
+<!-- JAVASCRIPT -->
 <script>
-// SET INITIAL STATE
+// FADE-IN SETUP
 document.querySelectorAll('.fade-box').forEach(el=>{
-el.style.opacity = 0;
-el.style.transform = "translateY(30px)";
-el.style.transition = "all 0.9s ease";
+el.style.opacity=0;
+el.style.transform="translateY(30px)";
+el.style.transition="all 0.9s ease";
 });
 
 // OBSERVER
-const observer = new IntersectionObserver(entries=>{
+const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
 if(entry.isIntersecting){
-entry.target.style.opacity = 1;
-entry.target.style.transform = "translateY(0)";
+entry.target.style.opacity=1;
+entry.target.style.transform="translateY(0)";
 observer.unobserve(entry.target);
 }
 });
-},{ threshold:0.2 });
+},{threshold:0.2});
 
-// APPLY
-document.querySelectorAll('.fade-box').forEach(el=>{
-observer.observe(el);
+document.querySelectorAll('.fade-box').forEach(el=>observer.observe(el));
+
+// SERVICE CARD HOVER (CORPORATE)
+document.querySelectorAll('.service-card').forEach(card=>{
+card.addEventListener("mouseenter",()=>{
+card.style.transform="translateY(-12px)";
+card.style.boxShadow="0 30px 60px rgba(0,0,0,0.15)";
+});
+card.addEventListener("mouseleave",()=>{
+card.style.transform="translateY(0)";
+card.style.boxShadow="0 20px 40px rgba(0,0,0,0.08)";
+});
 });
 
 // NAV STYLE
