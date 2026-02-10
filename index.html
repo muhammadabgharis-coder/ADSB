@@ -13,19 +13,13 @@
     border-radius:18px;
     transition:0.35s ease;
 }
-
 .neon-wrap::before{
     content:"";
     position:absolute;
     inset:-6px;
     background:linear-gradient(
         45deg,
-        #22d3ee,
-        #6366f1,
-        #a855f7,
-        #ec4899,
-        #facc15,
-        #22d3ee
+        #22d3ee,#6366f1,#a855f7,#ec4899,#facc15,#22d3ee
     );
     background-size:400% 400%;
     animation:none;
@@ -33,15 +27,12 @@
     z-index:-1;
     border-radius:24px;
 }
-
 .neon-wrap:hover::before{
     animation:neonSpin 3s linear infinite;
 }
-
 .neon-wrap:hover{
     transform:translateY(-10px) scale(1.025);
 }
-
 @keyframes neonSpin{
     0%{background-position:0% 50%;}
     50%{background-position:100% 50%;}
@@ -52,115 +43,162 @@
 
 <body style="margin:0; font-family:'Segoe UI', sans-serif; background:#f8fafc;">
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <section style="
-    height:90vh;
-    background:
-        linear-gradient(135deg, rgba(10,116,218,0.85), rgba(0,198,255,0.85)),
-        url('hero-bg.jpg');
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
+height:90vh;
+background:
+linear-gradient(135deg, rgba(10,116,218,0.85), rgba(0,198,255,0.85)),
+url('hero-bg.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
 ">
-    <div style="max-width:850px;">
+<div style="max-width:850px;">
+<img src="adsb.jpg" style="width:160px;border-radius:14px;margin-bottom:25px;">
+<h1 style="font-size:3.8rem;">ANDAL DINAMIK</h1>
+<p style="font-size:1.25rem;margin-bottom:35px;">
+Solusi Inovatif • Profesional • Berkualiti
+</p>
 
-        <!-- CEO IMAGE -->
-        <img src="adsb.jpg" alt="syarikat besar"
-             style="
-                width:160px;
-                border-radius:14px;
-                margin-bottom:25px;
-                box-shadow:0 12px 30px rgba(0,0,0,0.4);
-             ">
+<div style="display:flex;justify-content:center;gap:20px;">
+<a href="#services" class="btn-main" style="
+background:#ffd700;color:#333;padding:14px 34px;
+border-radius:30px;text-decoration:none;font-weight:bold;">
+Kenali Kami
+</a>
 
-        <h1 style="font-size:3.8rem; font-weight:bold; margin-bottom:20px;">
-            ANDAL DINAMIK
-        </h1>
-
-        <p style="font-size:1.25rem; opacity:0.95; margin-bottom:35px;">
-            Solusi Inovatif • Profesional • Berkualiti •  
-            Memacu Perniagaan Anda Ke Tahap Lebih Tinggi
-        </p>
-
-        <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
-            <a href="about.html" style="
-                background:#ffd700; color:#333; padding:14px 34px;
-                border-radius:30px; text-decoration:none;
-                font-weight:bold; font-size:1rem;">
-                Kenali Kami
-            </a>
-
-            <a href="contact.html" style="
-                background:#22d3ee; color:white; padding:14px 34px;
-                border-radius:30px; text-decoration:none;
-                font-weight:bold; font-size:1rem;">
-                Hubungi Kami
-            </a>
-        </div>
-
-    </div>
+<a href="contact.html" class="btn-main" style="
+background:#22d3ee;color:white;padding:14px 34px;
+border-radius:30px;text-decoration:none;font-weight:bold;">
+Hubungi Kami
+</a>
+</div>
+</div>
 </section>
 
-<!-- NAVIGATION -->
-<nav style="text-align:center; padding:16px; background:#1e293b;">
-    <a href="index.html" style="color:white; margin:0 18px; text-decoration:none;">Home</a>
-    <a href="about.html" style="color:white; margin:0 18px; text-decoration:none;">About Us</a>
-    <a href="services.html" style="color:white; margin:0 18px; text-decoration:none;">Services</a>
-    <a href="portfolio.html" style="color:white; margin:0 18px; text-decoration:none;">Portfolio</a>
-    <a href="contact.html" style="color:white; margin:0 18px; text-decoration:none;">Contact</a>
+<!-- NAV -->
+<nav id="navbar" style="text-align:center;padding:16px;background:#1e293b;">
+<a href="#" class="nav-link">Home</a>
+<a href="#services" class="nav-link">Services</a>
+<a href="portfolio.html" class="nav-link">Portfolio</a>
+<a href="contact.html" class="nav-link">Contact</a>
 </nav>
 
-<!-- FEATURE BOXES -->
-<section style="max-width:1200px; margin:70px auto; padding:0 20px;">
-    <h2 style="text-align:center; font-size:2.5rem; margin-bottom:50px;">
-        Apa Yang Kami Tawarkan
-    </h2>
+<!-- SERVICES -->
+<section id="services" style="max-width:1200px;margin:70px auto;padding:0 20px;">
+<h2 style="text-align:center;font-size:2.5rem;margin-bottom:50px;">
+Apa Yang Kami Tawarkan
+</h2>
 
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:35px;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:35px;">
 
-        <div class="neon-wrap">
-            <div style="
-                background:white; padding:38px; border-radius:18px;
-                box-shadow:0 14px 32px rgba(0,0,0,0.12); text-align:center;">
-                <h3>🚀 Inovatif</h3>
-                <p>Idea & teknologi kreatif untuk perniagaan moden.</p>
-            </div>
-        </div>
+<div class="neon-wrap">
+<div style="background:white;padding:38px;border-radius:18px;text-align:center;">
+<h3>🚀 Inovatif</h3>
+<p>Idea & teknologi kreatif.</p>
+</div>
+</div>
 
-        <div class="neon-wrap">
-            <div style="
-                background:white; padding:38px; border-radius:18px;
-                box-shadow:0 14px 32px rgba(0,0,0,0.12); text-align:center;">
-                <h3>🤝 Profesional</h3>
-                <p>Pasukan berpengalaman, bekerja dengan standard tinggi.</p>
-            </div>
-        </div>
+<div class="neon-wrap">
+<div style="background:white;padding:38px;border-radius:18px;text-align:center;">
+<h3>🤝 Profesional</h3>
+<p>Standard kerja bertaraf korporat.</p>
+</div>
+</div>
 
-        <div class="neon-wrap">
-            <div style="
-                background:white; padding:38px; border-radius:18px;
-                box-shadow:0 14px 32px rgba(0,0,0,0.12); text-align:center;">
-                <h3>🏆 Berkualiti</h3>
-                <p>Fokus kepada kepuasan pelanggan & hasil terbaik.</p>
-            </div>
-        </div>
+<div class="neon-wrap">
+<div style="background:white;padding:38px;border-radius:18px;text-align:center;">
+<h3>🏆 Berkualiti</h3>
+<p>Fokus hasil & kepuasan pelanggan.</p>
+</div>
+</div>
 
-    </div>
+</div>
+</section>
+
+<!-- COUNTER -->
+<section style="background:#e2e8f0;padding:60px 20px;text-align:center;">
+<h2 style="margin-bottom:30px;">Pencapaian Kami</h2>
+<div style="display:flex;justify-content:center;gap:50px;flex-wrap:wrap;">
+<div>
+<h1 class="counter" data-target="120">0</h1>
+<p>Projek</p>
+</div>
+<div>
+<h1 class="counter" data-target="80">0</h1>
+<p>Pelanggan</p>
+</div>
+<div>
+<h1 class="counter" data-target="10">0</h1>
+<p>Tahun Pengalaman</p>
+</div>
+</div>
 </section>
 
 <!-- FOOTER -->
-<footer style="
-    background:#0f172a;
-    color:#c7d2fe;
-    text-align:center;
-    padding:40px 20px;">
-    <p>© 2026 Andal Dinamik</p>
-    <p>Email: info@andaldinamik.com | Phone: +60 12-345 6789</p>
+<footer style="background:#0f172a;color:#c7d2fe;text-align:center;padding:40px 20px;">
+<p>© <span id="year"></span> Andal Dinamik</p>
+<p>Email: info@andaldinamik.com</p>
 </footer>
+
+<!-- JAVASCRIPT (INI YANG BUAT WEBSITE NAIK CLASS) -->
+<script>
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+anchor.addEventListener('click',function(e){
+e.preventDefault();
+document.querySelector(this.getAttribute('href')).scrollIntoView({
+behavior:'smooth'
+});
+});
+});
+
+// Active nav
+document.querySelectorAll('.nav-link').forEach(link=>{
+link.style.color="white";
+link.style.margin="0 18px";
+link.style.textDecoration="none";
+link.addEventListener('click',()=>{
+document.querySelectorAll('.nav-link').forEach(l=>l.style.opacity="0.6");
+link.style.opacity="1";
+});
+});
+
+// Counter animation
+const counters=document.querySelectorAll('.counter');
+counters.forEach(counter=>{
+let target=+counter.dataset.target;
+let count=0;
+let speed=target/80;
+let update=()=>{
+if(count<target){
+count+=speed;
+counter.innerText=Math.floor(count);
+requestAnimationFrame(update);
+}else{
+counter.innerText=target;
+}
+};
+update();
+});
+
+// Auto year
+document.getElementById("year").innerText=new Date().getFullYear();
+
+// Button hover glow (JS)
+document.querySelectorAll('.btn-main').forEach(btn=>{
+btn.addEventListener('mouseenter',()=>{
+btn.style.transform="scale(1.08)";
+});
+btn.addEventListener('mouseleave',()=>{
+btn.style.transform="scale(1)";
+});
+});
+</script>
 
 </body>
 </html>
