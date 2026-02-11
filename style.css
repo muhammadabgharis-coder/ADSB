@@ -6,59 +6,71 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
+/* ============================= */
+/* BODY - MODERN DARK BACKGROUND */
+/* ============================= */
 body {
-    background-color: #f9f9f9;
-    color: #333;
+    background: linear-gradient(135deg, #0f172a, #111827);
+    color: #e5e7eb;
     line-height: 1.6;
 }
 
-/* Header */
+/* ============================= */
+/* HEADER */
+/* ============================= */
 header {
-    background: #0a74da;
+    background: linear-gradient(90deg, #0a74da, #005bb5);
     color: white;
-    padding: 20px 0;
+    padding: 25px 0;
     text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
 header h1 {
     font-size: 2rem;
+    letter-spacing: 1px;
 }
 
-/* Navigation */
+/* ============================= */
+/* NAVIGATION */
+/* ============================= */
 nav {
-    background: #005bb5;
+    background: #0b3c75;
     display: flex;
     justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
-    padding: 10px 0;
-    font-weight: bold;
+    margin: 0 20px;
+    padding: 14px 0;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    color: #ffd700;
+    color: #00c3ff;
 }
 
-/* Container */
+/* ============================= */
+/* CONTAINER */
+/* ============================= */
 .container {
     max-width: 1100px;
-    margin: 20px auto;
+    margin: 40px auto;
     padding: 0 20px;
 }
 
 /* ============================= */
-/* WHAT WE DO - DARK PREMIUM THEME */
+/* WHAT WE DO SECTION */
 /* ============================= */
-
 .services {
     padding: 80px 10%;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background: linear-gradient(135deg, #1e293b, #0f172a);
     text-align: center;
-    color: white;
+    border-radius: 20px;
     margin-top: 40px;
 }
 
@@ -70,7 +82,7 @@ nav a:hover {
     position: relative;
 }
 
-/* Neon underline effect */
+/* Neon underline */
 .services h2::after {
     content: "";
     width: 80px;
@@ -88,40 +100,43 @@ nav a:hover {
 }
 
 .service-box {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
     border-radius: 15px;
     padding: 30px;
     transition: 0.4s ease;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.08);
 }
 
 .service-box:hover {
     transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(0, 195, 255, 0.1);
+    border: 1px solid #00c3ff;
 }
 
 .service-box h3 {
     margin-bottom: 15px;
     font-size: 20px;
-    font-weight: 500;
 }
 
 .service-box p {
     font-size: 14px;
-    opacity: 0.9;
+    opacity: 0.85;
 }
 
-/* Footer */
+/* ============================= */
+/* FOOTER */
+/* ============================= */
 footer {
-    background: #0a74da;
+    background: linear-gradient(90deg, #0a74da, #005bb5);
     color: white;
     text-align: center;
-    padding: 15px 0;
-    margin-top: 30px;
+    padding: 20px 0;
+    margin-top: 60px;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
 }
 
-/* Page specific sections */
+/* Headings & paragraph spacing */
 h2 {
     margin-bottom: 10px;
 }
