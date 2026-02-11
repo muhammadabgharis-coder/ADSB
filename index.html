@@ -1,320 +1,67 @@
-<!DOCTYPE html>
-<html lang="ms">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Andal Dinamik - Home</title>
+<section id="services" class="services" style="background: linear-gradient(135deg, #0a0f1a, #111827); color:#e5e7eb; padding:160px 40px; position:relative; overflow:hidden;">
 
-<style>
-body{
-margin:0;
-font-family:'Segoe UI',sans-serif;
-background:#020617;
-color:white;
-}
+  <h2 class="fade-box" style="color:#e5e7eb; text-align:center; font-size:3.3rem; margin-bottom:20px; font-weight:800; background:linear-gradient(90deg,#1d4ed8,#2563eb); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
+    What We Do
+  </h2>
 
-/* NAVBAR */
-nav{
-position:fixed;
-top:0;
-width:100%;
-z-index:1000;
-padding:18px 60px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(2,6,23,0.55);
-backdrop-filter:blur(10px);
-transition:0.3s;
-}
+  <p class="fade-box" style="color:#cbd5e1; text-align:center; max-width:720px; margin:0 auto 100px; font-size:1.2rem;">
+    Kami menyediakan solusi menyeluruh berasaskan teknologi, profesionalisme dan kualiti bertaraf industri dengan pendekatan strategik dan inovatif.
+  </p>
 
-.nav-link{
-color:white;
-margin:0 18px;
-text-decoration:none;
-opacity:0.75;
-transition:0.3s;
-}
+  <div class="service-grid">
 
-.nav-link:hover{
-opacity:1;
-}
+    <div class="fade-box service-card" style="background: rgba(15,23,42,0.75); backdrop-filter:blur(14px); padding:60px 45px; border-radius:30px; box-shadow:0 25px 70px rgba(0,0,0,0.3); transition:0.5s cubic-bezier(.4,0,.2,1); position:relative; overflow:hidden;">
+      <div style="font-size:3rem; margin-bottom:22px;">💡</div>
+      <h3 style="color:#e5e7eb;">Technology Solutions</h3>
+      <p style="color:#cbd5e1;">Reka bentuk sistem dan automasi untuk meningkatkan kecekapan operasi organisasi.</p>
+    </div>
 
-.nav-btn{
-margin-left:20px;
-padding:10px 22px;
-border-radius:30px;
-background:#facc15;
-color:#020617;
-text-decoration:none;
-font-weight:bold;
-}
+    <div class="fade-box service-card" style="background: rgba(15,23,42,0.75); backdrop-filter:blur(14px); padding:60px 45px; border-radius:30px; box-shadow:0 25px 70px rgba(0,0,0,0.3); transition:0.5s cubic-bezier(.4,0,.2,1); position:relative; overflow:hidden;">
+      <div style="font-size:3rem; margin-bottom:22px;">🧠</div>
+      <h3 style="color:#e5e7eb;">Professional Services</h3>
+      <p style="color:#cbd5e1;">Perundingan strategik dan pengurusan projek bertaraf korporat.</p>
+    </div>
 
-/* HERO */
-.hero{
-height:100vh;
-background:
-linear-gradient(120deg, rgba(2,6,23,0.88), rgba(2,6,23,0.45)),
-url('hero-bg.jpg');
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-padding-left:80px;
-}
+    <div class="fade-box service-card" style="background: rgba(15,23,42,0.75); backdrop-filter:blur(14px); padding:60px 45px; border-radius:30px; box-shadow:0 25px 70px rgba(0,0,0,0.3); transition:0.5s cubic-bezier(.4,0,.2,1); position:relative; overflow:hidden;">
+      <div style="font-size:3rem; margin-bottom:22px;">🛡️</div>
+      <h3 style="color:#e5e7eb;">Quality Assurance</h3>
+      <p style="color:#cbd5e1;">Pemantauan dan jaminan kualiti bagi memastikan prestasi sistem optimum.</p>
+    </div>
 
-.hero-logo{
-width:190px;
-height:auto;
-margin-bottom:25px;
-display:block;
-filter:drop-shadow(0 15px 35px rgba(0,0,0,0.5));
-}
+  </div>
 
-/* SERVICES */
-.services{
-background:linear-gradient(135deg,#f1f5f9,#e2e8f0);
-color:#0f172a;
-padding:160px 40px;
-position:relative;
-overflow:hidden;
-}
+  <div class="why-section fade-box" style="margin-top:140px; display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:50px; max-width:1200px; margin-left:auto; margin-right:auto;">
 
-.services::before{
-content:"";
-position:absolute;
-top:-150px;
-right:-150px;
-width:450px;
-height:450px;
-background:radial-gradient(circle,#2563eb33,transparent);
-}
+    <div class="why-box" style="background:#111827; padding:45px; border-radius:25px; box-shadow:0 20px 50px rgba(0,0,0,0.3); transition:0.4s;">
+      <h4 style="margin-bottom:15px; font-size:1.3rem; color:#e5e7eb;">🚀 Innovative Approach</h4>
+      <p style="color:#cbd5e1;">Pendekatan strategik menggunakan teknologi terkini.</p>
+    </div>
 
-.services h2{
-text-align:center;
-font-size:3.3rem;
-margin-bottom:20px;
-font-weight:800;
-background:linear-gradient(90deg,#1d4ed8,#2563eb);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
+    <div class="why-box" style="background:#111827; padding:45px; border-radius:25px; box-shadow:0 20px 50px rgba(0,0,0,0.3); transition:0.4s;">
+      <h4 style="margin-bottom:15px; font-size:1.3rem; color:#e5e7eb;">🎯 Result Driven</h4>
+      <p style="color:#cbd5e1;">Penyelesaian direka untuk memberi impak sebenar.</p>
+    </div>
 
-.services p{
-text-align:center;
-max-width:720px;
-margin:0 auto 100px;
-color:#475569;
-font-size:1.2rem;
-}
+    <div class="why-box" style="background:#111827; padding:45px; border-radius:25px; box-shadow:0 20px 50px rgba(0,0,0,0.3); transition:0.4s;">
+      <h4 style="margin-bottom:15px; font-size:1.3rem; color:#e5e7eb;">🤝 Trusted Partnership</h4>
+      <p style="color:#cbd5e1;">Hubungan jangka panjang berasaskan integriti.</p>
+    </div>
 
-.service-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:60px;
-max-width:1200px;
-margin:auto;
-}
+  </div>
 
-.service-card{
-background:rgba(255,255,255,0.75);
-backdrop-filter:blur(14px);
-padding:60px 45px;
-border-radius:30px;
-box-shadow:0 25px 70px rgba(0,0,0,0.08);
-transition:0.5s cubic-bezier(.4,0,.2,1);
-position:relative;
-overflow:hidden;
-}
-
-.service-card::after{
-content:"";
-position:absolute;
-bottom:0;
-left:0;
-width:100%;
-height:4px;
-background:linear-gradient(90deg,#1d4ed8,#2563eb);
-transition:0.4s;
-}
-
-.service-card:hover{
-transform:translateY(-20px) scale(1.04);
-box-shadow:0 40px 90px rgba(0,0,0,0.15);
-}
-
-.service-card:hover::after{
-height:8px;
-}
-
-/* WHY SECTION */
-.why-section{
-margin-top:140px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:50px;
-max-width:1200px;
-margin-left:auto;
-margin-right:auto;
-}
-
-.why-box{
-background:white;
-padding:45px;
-border-radius:25px;
-box-shadow:0 20px 50px rgba(0,0,0,0.08);
-transition:0.4s;
-}
-
-.why-box:hover{
-transform:translateY(-10px);
-box-shadow:0 30px 70px rgba(0,0,0,0.15);
-}
-
-.why-box h4{
-margin-bottom:15px;
-font-size:1.3rem;
-}
-
-/* STATS */
-.stats{
-margin-top:140px;
-display:flex;
-justify-content:space-around;
-flex-wrap:wrap;
-gap:40px;
-text-align:center;
-}
-
-.stat-item h3{
-font-size:3rem;
-color:#1d4ed8;
-margin-bottom:10px;
-}
-
-.stat-item p{
-color:#475569;
-font-weight:500;
-}
-
-/* FOOTER */
-footer{
-background:#020617;
-color:#94a3b8;
-padding:50px;
-text-align:center;
-}
-
-/* FADE */
-.fade-box{
-opacity:0;
-transform:translateY(40px);
-transition:all 1s cubic-bezier(.4,0,.2,1);
-}
-
-.fade-box.show{
-opacity:1;
-transform:translateY(0);
-}
-</style>
-</head>
-
-<body>
-
-<nav>
-<div style="font-weight:bold;font-size:1.4rem;">ANDAL DINAMIK</div>
-<div>
-<a href="#" class="nav-link">Home</a>
-<a href="#services" class="nav-link">Services</a>
-<a href="about.html" class="nav-link">About</a>
-<a href="contact.html" class="nav-btn">Contact Us</a>
-</div>
-</nav>
-
-<section class="hero">
-<div style="max-width:720px;">
-<img src="adsb.jpg" class="fade-box hero-logo">
-<p class="fade-box" style="letter-spacing:3px;font-size:0.95rem;">YOUR PARTNER FOR INNOVATION</p>
-<h1 class="fade-box" style="font-size:4.5rem;margin:0;">Empowering Innovation.</h1>
-<h1 class="fade-box" style="font-size:4.5rem;background:#1d4ed8;display:inline-block;padding:12px 22px;border-radius:12px;margin-top:10px;">Driving Excellence</h1>
-<div class="fade-box" style="margin-top:50px;">
-<a href="#services" style="background:#2563eb;padding:18px 40px;border-radius:50px;color:white;text-decoration:none;font-weight:bold;">Find Service →</a>
-<a href="contact.html" style="margin-left:25px;padding:18px 40px;border-radius:50px;border:2px solid #facc15;color:#facc15;text-decoration:none;font-weight:bold;">Contact Us</a>
-</div>
-</div>
-</section>
-
-<section id="services" class="services">
-
-<h2 class="fade-box">What We Do</h2>
-<p class="fade-box">Kami menyediakan solusi menyeluruh berasaskan teknologi, profesionalisme dan kualiti bertaraf industri dengan pendekatan strategik dan inovatif.</p>
-
-<div class="service-grid">
-
-<div class="fade-box service-card">
-<div style="font-size:3rem;margin-bottom:22px;">💡</div>
-<h3>Technology Solutions</h3>
-<p>Reka bentuk sistem dan automasi untuk meningkatkan kecekapan operasi organisasi.</p>
-</div>
-
-<div class="fade-box service-card">
-<div style="font-size:3rem;margin-bottom:22px;">🧠</div>
-<h3>Professional Services</h3>
-<p>Perundingan strategik dan pengurusan projek bertaraf korporat.</p>
-</div>
-
-<div class="fade-box service-card">
-<div style="font-size:3rem;margin-bottom:22px;">🛡️</div>
-<h3>Quality Assurance</h3>
-<p>Pemantauan dan jaminan kualiti bagi memastikan prestasi sistem optimum.</p>
-</div>
-
-</div>
-
-<div class="why-section fade-box">
-
-<div class="why-box">
-<h4>🚀 Innovative Approach</h4>
-<p>Pendekatan strategik menggunakan teknologi terkini.</p>
-</div>
-
-<div class="why-box">
-<h4>🎯 Result Driven</h4>
-<p>Penyelesaian direka untuk memberi impak sebenar.</p>
-</div>
-
-<div class="why-box">
-<h4>🤝 Trusted Partnership</h4>
-<p>Hubungan jangka panjang berasaskan integriti.</p>
-</div>
-
-</div>
-
-<div class="stats fade-box">
-<div class="stat-item"><h3>50+</h3><p>Projects Completed</p></div>
-<div class="stat-item"><h3>98%</h3><p>Client Satisfaction</p></div>
-<div class="stat-item"><h3>10+</h3><p>Years Experience</p></div>
-</div>
+  <div class="stats fade-box" style="margin-top:140px; display:flex; justify-content:space-around; flex-wrap:wrap; gap:40px; text-align:center;">
+    <div class="stat-item">
+      <h3 style="font-size:3rem; color:#2563eb; margin-bottom:10px;">50+</h3>
+      <p style="color:#cbd5e1; font-weight:500;">Projects Completed</p>
+    </div>
+    <div class="stat-item">
+      <h3 style="font-size:3rem; color:#2563eb; margin-bottom:10px;">98%</h3>
+      <p style="color:#cbd5e1; font-weight:500;">Client Satisfaction</p>
+    </div>
+    <div class="stat-item">
+      <h3 style="font-size:3rem; color:#2563eb; margin-bottom:10px;">10+</h3>
+      <p style="color:#cbd5e1; font-weight:500;">Years Experience</p>
+    </div>
+  </div>
 
 </section>
-
-<footer class="fade-box">
-© 2026 Andal Dinamik. All Rights Reserved.
-</footer>
-
-<script>
-const observer = new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-},{threshold:0.2});
-
-document.querySelectorAll(".fade-box").forEach(el=>{
-observer.observe(el);
-});
-</script>
-
-</body>
-</html>
