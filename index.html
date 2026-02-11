@@ -4,13 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Andal Dinamik - Home</title>
-<link rel="stylesheet" href="style.css">
-</head>
 
-<body style="margin:0;font-family:'Segoe UI',sans-serif;background:#020617;color:white;">
+<style>
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:#020617;
+color:white;
+}
 
-<!-- NAVBAR -->
-<nav id="navbar" style="
+/* NAVBAR */
+nav{
 position:fixed;
 top:0;
 width:100%;
@@ -22,7 +26,119 @@ align-items:center;
 background:rgba(2,6,23,0.55);
 backdrop-filter:blur(10px);
 transition:0.3s;
-">
+}
+
+.nav-link{
+color:white;
+margin:0 18px;
+text-decoration:none;
+opacity:0.75;
+transition:0.3s;
+}
+
+.nav-link:hover{
+opacity:1;
+}
+
+.nav-btn{
+margin-left:20px;
+padding:10px 22px;
+border-radius:30px;
+background:#facc15;
+color:#020617;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:
+linear-gradient(120deg, rgba(2,6,23,0.88), rgba(2,6,23,0.45)),
+url('hero-bg.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding-left:80px;
+}
+
+.hero-logo{
+width:180px;
+height:auto;
+margin-bottom:22px;
+display:block;
+filter:drop-shadow(0 10px 30px rgba(0,0,0,0.4));
+}
+
+/* SERVICES */
+.services{
+background:#f8fafc;
+color:#020617;
+padding:110px 40px;
+}
+
+.services h2{
+text-align:center;
+font-size:2.8rem;
+margin-bottom:14px;
+}
+
+.services p{
+text-align:center;
+max-width:680px;
+margin:0 auto 70px;
+color:#475569;
+font-size:1.05rem;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:40px;
+max-width:1200px;
+margin:auto;
+}
+
+.service-card{
+background:white;
+padding:50px 40px;
+border-radius:22px;
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
+transition:0.35s;
+}
+
+.service-card:hover{
+transform:translateY(-12px);
+box-shadow:0 30px 60px rgba(0,0,0,0.15);
+}
+
+/* FOOTER */
+footer{
+background:#020617;
+color:#94a3b8;
+padding:40px;
+text-align:center;
+}
+
+/* FADE ANIMATION */
+.fade-box{
+opacity:0;
+transform:translateY(30px);
+transition:all 0.9s ease;
+}
+
+.fade-box.show{
+opacity:1;
+transform:translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
 <div style="font-weight:bold;font-size:1.3rem;">ANDAL DINAMIK</div>
 <div>
 <a href="#" class="nav-link">Home</a>
@@ -33,27 +149,19 @@ transition:0.3s;
 </nav>
 
 <!-- HERO -->
-<section class="fade-box" style="
-height:100vh;
-background:
-linear-gradient(120deg, rgba(2,6,23,0.88), rgba(2,6,23,0.45)),
-url('hero-bg.jpg');
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-padding-left:80px;
-">
+<section class="hero">
 
 <div style="max-width:720px;">
 
-<img src="adsb.jpg" class="fade-box" style="width:90px;margin-bottom:14px;">
+<img src="adsb.jpg" class="fade-box hero-logo">
 
 <p class="fade-box" style="letter-spacing:2px;font-size:0.9rem;">
 YOUR PARTNER FOR INNOVATION
 </p>
 
-<h1 class="fade-box" style="font-size:4.2rem;">Empowering Innovation.</h1>
+<h1 class="fade-box" style="font-size:4.2rem;">
+Empowering Innovation.
+</h1>
 
 <h1 class="fade-box" style="
 font-size:4.2rem;
@@ -91,41 +199,17 @@ Contact Us
 </section>
 
 <!-- SERVICES -->
-<section id="services" style="background:#f8fafc;color:#020617;padding:110px 40px;">
-<h2 class="fade-box" style="
-text-align:center;
-font-size:2.8rem;
-margin-bottom:14px;
-">
-What We Do
-</h2>
+<section id="services" class="services">
 
-<p class="fade-box" style="
-text-align:center;
-max-width:680px;
-margin:0 auto 70px;
-color:#475569;
-font-size:1.05rem;
-">
+<h2 class="fade-box">What We Do</h2>
+
+<p class="fade-box">
 Kami menyediakan solusi menyeluruh berasaskan teknologi, profesionalisme dan kualiti bertaraf industri.
 </p>
 
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:40px;
-max-width:1200px;
-margin:auto;
-">
+<div class="service-grid">
 
-<!-- CARD 1 -->
-<div class="fade-box service-card" style="
-background:white;
-padding:50px 40px;
-border-radius:22px;
-box-shadow:0 20px 40px rgba(0,0,0,0.08);
-transition:0.35s;
-">
+<div class="fade-box service-card">
 <div style="font-size:2.6rem;margin-bottom:18px;">💡</div>
 <h3 style="margin-bottom:14px;font-size:1.4rem;">
 Technology Solutions
@@ -135,14 +219,7 @@ Reka bentuk sistem, automasi dan penyelesaian digital untuk meningkatkan kecekap
 </p>
 </div>
 
-<!-- CARD 2 -->
-<div class="fade-box service-card" style="
-background:white;
-padding:50px 40px;
-border-radius:22px;
-box-shadow:0 20px 40px rgba(0,0,0,0.08);
-transition:0.35s;
-">
+<div class="fade-box service-card">
 <div style="font-size:2.6rem;margin-bottom:18px;">🧠</div>
 <h3 style="margin-bottom:14px;font-size:1.4rem;">
 Professional Services
@@ -152,14 +229,7 @@ Khidmat perundingan, sokongan teknikal dan pengurusan projek berstandard korpora
 </p>
 </div>
 
-<!-- CARD 3 -->
-<div class="fade-box service-card" style="
-background:white;
-padding:50px 40px;
-border-radius:22px;
-box-shadow:0 20px 40px rgba(0,0,0,0.08);
-transition:0.35s;
-">
+<div class="fade-box service-card">
 <div style="font-size:2.6rem;margin-bottom:18px;">🛡️</div>
 <h3 style="margin-bottom:14px;font-size:1.4rem;">
 Quality Assurance
@@ -173,67 +243,23 @@ Pemantauan, pengujian dan jaminan kualiti bagi memastikan prestasi sistem sentia
 </section>
 
 <!-- FOOTER -->
-<footer class="fade-box" style="
-background:#020617;
-color:#94a3b8;
-padding:40px;
-text-align:center;">
+<footer class="fade-box">
 © 2026 Andal Dinamik
 </footer>
 
 <!-- JAVASCRIPT -->
 <script>
-// FADE-IN SETUP
-document.querySelectorAll('.fade-box').forEach(el=>{
-el.style.opacity=0;
-el.style.transform="translateY(30px)";
-el.style.transition="all 0.9s ease";
-});
-
-// OBSERVER
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
 if(entry.isIntersecting){
-entry.target.style.opacity=1;
-entry.target.style.transform="translateY(0)";
-observer.unobserve(entry.target);
+entry.target.classList.add("show");
 }
 });
 },{threshold:0.2});
 
-document.querySelectorAll('.fade-box').forEach(el=>observer.observe(el));
-
-// SERVICE CARD HOVER (CORPORATE)
-document.querySelectorAll('.service-card').forEach(card=>{
-card.addEventListener("mouseenter",()=>{
-card.style.transform="translateY(-12px)";
-card.style.boxShadow="0 30px 60px rgba(0,0,0,0.15)";
+document.querySelectorAll(".fade-box").forEach(el=>{
+observer.observe(el);
 });
-card.addEventListener("mouseleave",()=>{
-card.style.transform="translateY(0)";
-card.style.boxShadow="0 20px 40px rgba(0,0,0,0.08)";
-});
-});
-
-// NAV STYLE
-document.querySelectorAll(".nav-link").forEach(link=>{
-link.style.color="white";
-link.style.margin="0 18px";
-link.style.textDecoration="none";
-link.style.opacity="0.75";
-link.onmouseenter=()=>link.style.opacity="1";
-link.onmouseleave=()=>link.style.opacity="0.75";
-});
-
-document.querySelector(".nav-btn").style.cssText=`
-margin-left:20px;
-padding:10px 22px;
-border-radius:30px;
-background:#facc15;
-color:#020617;
-text-decoration:none;
-font-weight:bold;
-`;
 </script>
 
 </body>
