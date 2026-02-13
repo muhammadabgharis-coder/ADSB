@@ -1,118 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andal Dinamik - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andal Dinamik - Portfolio</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* HERO */
+.hero{
+background: linear-gradient(135deg,#0a74da,#00c6ff);
+color:white;
+padding:100px 20px;
+text-align:center;
+}
+
+.hero h2{
+font-size:2.8rem;
+margin-bottom:10px;
+}
+
+/* CONTAINER */
+.container{
+max-width:1200px;
+margin:0 auto 100px;
+padding:0 20px;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+margin-top:-60px;
+}
+
+/* CARD */
+.card{
+position:relative;
+border-radius:18px;
+overflow:hidden;
+cursor:pointer;
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+transition:0.4s;
+background:white;
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+display:block;
+}
+
+.card:hover{
+transform:translateY(-12px);
+box-shadow:0 25px 50px rgba(0,0,0,0.25);
+}
+
+/* OVERLAY */
+.overlay{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(to top,rgba(0,0,0,0.8),transparent);
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+padding:20px;
+opacity:0;
+transition:0.4s;
+}
+
+.card:hover .overlay{
+opacity:1;
+}
+
+.overlay h3{
+margin-bottom:5px;
+}
+
+/* COUNTER SECTION */
+.counter-section{
+background:#f8fafc;
+padding:80px 20px;
+text-align:center;
+}
+
+.counter-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+max-width:1000px;
+margin:0 auto;
+}
+
+.counter h2{
+font-size:2.5rem;
+color:#0a74da;
+}
+
+.counter p{
+color:#555;
+}
+
+/* MODAL */
+.modal{
+display:none;
+position:fixed;
+z-index:999;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+justify-content:center;
+align-items:center;
+}
+
+.modal-content{
+background:white;
+padding:40px;
+border-radius:16px;
+max-width:500px;
+text-align:center;
+position:relative;
+}
+
+.modal-content h3{
+margin-bottom:15px;
+}
+
+.close{
+position:absolute;
+top:15px;
+right:20px;
+cursor:pointer;
+font-size:1.5rem;
+}
+
+</style>
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <h1>Andal Dinamik</h1>
-    </header>
+<header>
+<h1>Andal Dinamik</h1>
+</header>
 
-    <!-- NAVIGATION -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="services.html">Services</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="services.html">Services</a>
+<a href="portfolio.html" class="active">Portfolio</a>
+<a href="contact.html">Contact</a>
+</nav>
 
-    <!-- HERO PORTFOLIO -->
-    <div style="
-        background: linear-gradient(135deg,#0a74da,#00c6ff);
-        color:white;
-        padding:70px 20px;
-        text-align:center;
-    ">
-        <h2 style="font-size:2.4rem;margin-bottom:10px;">
-            Portfolio Kami
-        </h2>
-        <p style="font-size:1.1rem;opacity:0.9;">
-            Projek-projek yang telah kami jayakan dengan penuh kreativiti & profesionalisme
-        </p>
-    </div>
+<!-- HERO -->
+<div class="hero">
+<h2>Portfolio Kami</h2>
+<p>Projek-projek terbaik yang telah kami jayakan</p>
+</div>
 
-    <!-- CONTENT -->
-    <div class="container" style="margin-top:-40px;">
+<!-- PROJECT GRID -->
+<div class="container">
+<div class="grid">
 
-        <div style="
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-            gap:25px;
-        ">
+<div class="card" onclick="openModal('Web & E-commerce','Website moden dan sistem jualan online untuk pelbagai industri.')">
+<img src="https://picsum.photos/600/400?1">
+<div class="overlay">
+<h3>Web & E-commerce</h3>
+<p>Klik untuk lihat detail</p>
+</div>
+</div>
 
-            <!-- PROJECT 1 -->
-            <div
-                onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 35px rgba(0,0,0,0.15)'"
-                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.1)'"
-                style="
-                    background:white;
-                    padding:30px;
-                    border-radius:16px;
-                    box-shadow:0 10px 25px rgba(0,0,0,0.1);
-                    text-align:center;
-                    transition:0.3s ease;
-                    cursor:pointer;
-                "
-            >
-                <h3>🌐 Projek Web & E-commerce</h3>
-                <p style="color:#555;line-height:1.6;">
-                    Website profesional & sistem e-commerce untuk perniagaan moden.
-                </p>
-            </div>
+<div class="card" onclick="openModal('Branding & Design','Reka bentuk logo, poster dan identiti visual profesional.')">
+<img src="https://picsum.photos/600/400?2">
+<div class="overlay">
+<h3>Branding & Design</h3>
+<p>Klik untuk lihat detail</p>
+</div>
+</div>
 
-            <!-- PROJECT 2 -->
-            <div
-                onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 35px rgba(0,0,0,0.15)'"
-                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.1)'"
-                style="
-                    background:white;
-                    padding:30px;
-                    border-radius:16px;
-                    box-shadow:0 10px 25px rgba(0,0,0,0.1);
-                    text-align:center;
-                    transition:0.3s ease;
-                    cursor:pointer;
-                "
-            >
-                <h3>🎨 Branding & Design Kreatif</h3>
-                <p style="color:#555;line-height:1.6;">
-                    Identiti visual & material marketing yang menarik dan profesional.
-                </p>
-            </div>
+<div class="card" onclick="openModal('Automasi & Sistem IT','Pembangunan sistem automasi untuk operasi lebih efisien.')">
+<img src="https://picsum.photos/600/400?3">
+<div class="overlay">
+<h3>Automasi IT</h3>
+<p>Klik untuk lihat detail</p>
+</div>
+</div>
 
-            <!-- PROJECT 3 -->
-            <div
-                onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 35px rgba(0,0,0,0.15)'"
-                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.1)'"
-                style="
-                    background:white;
-                    padding:30px;
-                    border-radius:16px;
-                    box-shadow:0 10px 25px rgba(0,0,0,0.1);
-                    text-align:center;
-                    transition:0.3s ease;
-                    cursor:pointer;
-                "
-            >
-                <h3>🤖 Automasi & Sistem IT</h3>
-                <p style="color:#555;line-height:1.6;">
-                    Sistem automasi & IT yang efisien untuk meningkatkan produktiviti.
-                </p>
-            </div>
+</div>
+</div>
 
-        </div>
-    </div>
+<!-- COUNTER -->
+<div class="counter-section">
+<div class="counter-grid">
 
-    <!-- FOOTER -->
-    <footer>
-        &copy; 2026 Andal Dinamik. All Rights Reserved.
-    </footer>
+<div class="counter">
+<h2 id="count1">0</h2>
+<p>Projek Siap</p>
+</div>
+
+<div class="counter">
+<h2 id="count2">0</h2>
+<p>Client Berpuas Hati</p>
+</div>
+
+<div class="counter">
+<h2 id="count3">0</h2>
+<p>Tahun Pengalaman</p>
+</div>
+
+</div>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal()">&times;</span>
+<h3 id="modalTitle"></h3>
+<p id="modalDesc"></p>
+</div>
+</div>
+
+<footer>
+&copy; 2026 Andal Dinamik. All Rights Reserved.
+</footer>
+
+<script>
+
+/* MODAL */
+function openModal(title,desc){
+document.getElementById("modal").style.display="flex";
+document.getElementById("modalTitle").innerText=title;
+document.getElementById("modalDesc").innerText=desc;
+}
+
+function closeModal(){
+document.getElementById("modal").style.display="none";
+}
+
+/* COUNTER ANIMATION */
+function animateCounter(id,target){
+let count=0;
+let speed=target/100;
+let interval=setInterval(()=>{
+count+=speed;
+if(count>=target){
+count=target;
+clearInterval(interval);
+}
+document.getElementById(id).innerText=Math.floor(count);
+},20);
+}
+
+window.onload=function(){
+animateCounter("count1",50);
+animateCounter("count2",45);
+animateCounter("count3",5);
+}
+
+</script>
 
 </body>
 </html>
