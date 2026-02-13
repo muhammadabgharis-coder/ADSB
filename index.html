@@ -6,7 +6,6 @@
 <title>Andal Dinamik - Home</title>
 
 <style>
-/* RESET & BODY */
 body {
     margin:0;
     font-family:'Segoe UI',sans-serif;
@@ -27,7 +26,7 @@ nav {
     background:rgba(2,6,23,0.55);
     backdrop-filter:blur(10px);
     transition:0.5s;
-    flex-wrap:wrap; /* supaya responsive */
+    flex-wrap:wrap;
 }
 
 .nav-link {
@@ -118,15 +117,17 @@ nav {
     margin:auto;
 }
 
+/* 🔥 DARK PREMIUM CARD */
 .service-card {
-    background:rgba(255,255,255,0.75);
+    background:rgba(15,23,42,0.9);
     backdrop-filter:blur(14px);
     padding:60px 45px;
     border-radius:30px;
-    box-shadow:0 25px 70px rgba(0,0,0,0.08);
+    box-shadow:0 25px 70px rgba(0,0,0,0.6);
     transition:0.5s cubic-bezier(.4,0,.2,1);
     position:relative;
     overflow:hidden;
+    border:1px solid rgba(255,255,255,0.05);
 }
 
 .service-card::after {
@@ -142,7 +143,7 @@ nav {
 
 .service-card:hover {
     transform:translateY(-20px) scale(1.04);
-    box-shadow:0 40px 90px rgba(0,0,0,0.15);
+    box-shadow:0 40px 90px rgba(0,0,0,0.8);
 }
 
 .service-card:hover::after {
@@ -160,17 +161,19 @@ nav {
     margin-right:auto;
 }
 
+/* 🔥 DARK WHY BOX */
 .why-box {
-    background:white;
+    background:#0f172a;
     padding:45px;
     border-radius:25px;
-    box-shadow:0 20px 50px rgba(0,0,0,0.08);
+    box-shadow:0 20px 50px rgba(0,0,0,0.5);
     transition:0.5s;
+    border:1px solid rgba(255,255,255,0.05);
 }
 
 .why-box:hover {
     transform:translateY(-10px);
-    box-shadow:0 30px 70px rgba(0,0,0,0.15);
+    box-shadow:0 30px 70px rgba(0,0,0,0.7);
 }
 
 .why-box h4 {
@@ -195,7 +198,7 @@ nav {
 }
 
 .stat-item p {
-    color:#475569;
+    color:#94a3b8;
     font-weight:500;
 }
 
@@ -219,22 +222,11 @@ footer {
     transform:translateY(0);
 }
 
-/* ============================= */
-/* MEDIA QUERIES RESPONSIVE */
-@media screen and (max-width: 1024px) {
-    .hero {
-        padding-left:40px;
-    }
-}
-
+/* RESPONSIVE */
 @media screen and (max-width: 768px) {
     nav {
         flex-direction:column;
         padding:10px 20px;
-    }
-
-    nav div {
-        margin:10px 0;
     }
 
     .hero {
@@ -242,57 +234,8 @@ footer {
         text-align:center;
     }
 
-    .hero-logo {
-        width:50%;
-        margin:0 auto 20px;
-    }
-
-    .hero h1 {
-        font-size:2rem;
-    }
-
-    .hero p {
-        font-size:1rem;
-    }
-
-    .service-grid {
-        gap:30px;
-    }
-
     .service-card {
         padding:30px 20px;
-    }
-
-    .why-section {
-        gap:30px;
-        padding:0 10px;
-    }
-
-    .stats {
-        gap:20px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .hero-logo {
-        width:70%;
-    }
-
-    .hero h1 {
-        font-size:1.6rem;
-    }
-
-    .service-card h3 {
-        font-size:1.2rem;
-    }
-
-    .service-card p {
-        font-size:0.9rem;
-    }
-
-    .nav-link, .nav-btn {
-        font-size:14px;
-        margin:5px 0;
     }
 }
 </style>
@@ -300,7 +243,6 @@ footer {
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
 <div style="position:absolute; left:60px; font-weight:bold; font-size:1.4rem;">ANDAL DINAMIK</div>
 <div style="margin:0 auto; display:flex; align-items:center;">
@@ -312,7 +254,6 @@ footer {
 </div>
 </nav>
 
-<!-- HERO SECTION -->
 <section class="hero">
 <div style="max-width:720px;">
 <img src="adsb.jpg" class="fade-box hero-logo">
@@ -326,7 +267,6 @@ footer {
 </div>
 </section>
 
-<!-- SERVICES SECTION -->
 <section id="services" class="services">
 <h2 class="fade-box">What We Do</h2>
 <p class="fade-box">
@@ -377,12 +317,10 @@ Kami menyediakan solusi menyeluruh berasaskan teknologi, profesionalisme dan kua
 </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="fade-box">
 © 2026 Andal Dinamik. All Rights Reserved.
 </footer>
 
-<!-- FADE ANIMATION SCRIPT -->
 <script>
 const observer = new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
