@@ -63,15 +63,16 @@ z-index:1000;
 }
 
 body.light nav{
-background:rgba(255,255,255,0.8);
+background:rgba(255,255,255,0.9);
 }
 
 nav a{
 margin:0 18px;
 text-decoration:none;
 color:inherit;
-opacity:0.6;
+opacity:0.7;
 transition:0.3s;
+font-weight:500;
 }
 
 nav a:hover,
@@ -86,7 +87,6 @@ left:60px;
 font-weight:bold;
 }
 
-/* DARK MODE BUTTON */
 .toggle{
 position:absolute;
 right:60px;
@@ -96,13 +96,13 @@ font-size:0.9rem;
 
 /* HERO */
 .hero{
-padding:200px 20px 120px;
+padding:200px 20px 100px;
 text-align:center;
 }
 
 .hero h2{
-font-size:3.5rem;
-margin-bottom:20px;
+font-size:3rem;
+margin-bottom:15px;
 }
 
 .hero p{
@@ -111,7 +111,7 @@ opacity:0.8;
 
 /* GRID */
 .container{
-max-width:1200px;
+max-width:1100px;
 margin:0 auto 120px;
 padding:0 20px;
 }
@@ -124,47 +124,40 @@ gap:40px;
 
 /* CARD */
 .card{
-background:rgba(255,255,255,0.05);
+background:rgba(255,255,255,0.07);
 padding:50px;
 border-radius:25px;
 text-align:center;
-transition:0.5s;
+transition:0.4s;
 backdrop-filter:blur(15px);
-transform-style:preserve-3d;
 box-shadow:0 20px 60px rgba(0,0,0,0.4);
 }
 
 body.light .card{
 background:white;
+box-shadow:0 20px 40px rgba(0,0,0,0.1);
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-8px);
 box-shadow:0 30px 80px rgba(0,0,0,0.6);
 }
 
 .card h3{
 margin-bottom:15px;
+font-size:1.3rem;
 }
 
 .card a{
 text-decoration:none;
 color:#38bdf8;
+font-size:1rem;
 }
 
-/* SCROLL REVEAL */
-.reveal{
-opacity:0;
-transform:translateY(50px);
-transition:1s;
+body.light .card a{
+color:#0ea5e9;
 }
 
-.reveal.active{
-opacity:1;
-transform:translateY(0);
-}
-
-/* FOOTER */
 footer{
 text-align:center;
 padding:60px;
@@ -196,21 +189,21 @@ opacity:0.6;
 <div class="container">
 <div class="grid">
 
-<div class="card reveal">
+<div class="card">
 <h3>Email</h3>
 <a href="mailto:enquiry@andaldinamik.com.my">
 enquiry@andaldinamik.com.my
 </a>
 </div>
 
-<div class="card reveal">
+<div class="card">
 <h3>Phone</h3>
 <a href="tel:+60143086541">
 +60 14-308 6541
 </a>
 </div>
 
-<div class="card reveal">
+<div class="card">
 <h3>Address</h3>
 <a href="https://www.google.com/maps/search/?api=1&query=37+Jalan+Dagangan+3+Pusat+Bandar+Bertam+Perdana+13200+Kepala+Batas+Pulau+Pinang" target="_blank">
 37, Jalan Dagangan 3,<br>
@@ -243,21 +236,10 @@ function typing(){
 if(i < text.length){
 document.getElementById("typewriter").innerHTML += text.charAt(i);
 i++;
-setTimeout(typing,50);
+setTimeout(typing,40);
 }
 }
 typing();
-
-/* SCROLL REVEAL */
-window.addEventListener("scroll",()=>{
-document.querySelectorAll(".reveal").forEach(el=>{
-let windowHeight = window.innerHeight;
-let elementTop = el.getBoundingClientRect().top;
-if(elementTop < windowHeight - 100){
-el.classList.add("active");
-}
-});
-});
 
 /* DARK MODE */
 document.querySelector(".toggle").onclick=()=>{
