@@ -6,230 +6,303 @@
 <title>Andal Dinamik - Home</title>
 
 <style>
-body{
-margin:0;
-font-family:'Segoe UI',sans-serif;
-background:#020617;
-color:white;
+/* RESET & BODY */
+body {
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:#020617;
+    color:white;
 }
 
 /* NAVBAR */
-nav{
-position:fixed;
-top:0;
-width:100%;
-z-index:1000;
-padding:18px 60px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(2,6,23,0.55);
-backdrop-filter:blur(10px);
-transition:0.5s;
+nav {
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    padding:18px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(2,6,23,0.55);
+    backdrop-filter:blur(10px);
+    transition:0.5s;
+    flex-wrap:wrap; /* supaya responsive */
 }
 
-
-.nav-link{
-color:white;
-margin:0 18px;
-text-decoration:none;
-opacity:0.75;
-transition:0.5s;
+.nav-link {
+    color:white;
+    margin:0 18px;
+    text-decoration:none;
+    opacity:0.75;
+    transition:0.5s;
 }
 
-.nav-link:hover{
-opacity:1;
+.nav-link:hover {
+    opacity:1;
 }
 
-.nav-btn{
-margin-left:20px;
-padding:10px 22px;
-border-radius:30px;
-background:#facc15;
-color:#020617;
-text-decoration:none;
-font-weight:bold;
+.nav-btn {
+    margin-left:20px;
+    padding:10px 22px;
+    border-radius:30px;
+    background:#facc15;
+    color:#020617;
+    text-decoration:none;
+    font-weight:bold;
 }
 
 /* HERO */
-.hero{
-height:100vh;
-background:
-linear-gradient(120deg, rgba(2,6,23,0.88), rgba(2,6,23,0.45)),
-url('hero-bg.jpg');
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-padding-left:80px;
+.hero {
+    height:100vh;
+    background:
+    linear-gradient(120deg, rgba(2,6,23,0.88), rgba(2,6,23,0.45)),
+    url('hero-bg.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    padding-left:80px;
 }
 
-.hero-logo{
-width:190px;
-height:auto;
-margin-bottom:25px;
-display:block;
-filter:drop-shadow(0 15px 35px rgba(0,0,0,0.5));
+.hero-logo {
+    width:190px;
+    height:auto;
+    margin-bottom:25px;
+    display:block;
+    filter:drop-shadow(0 15px 35px rgba(0,0,0,0.5));
 }
 
 /* SERVICES */
-.services{
-background:linear-gradient(135deg,#f1f5f9,#e2e8f0);
-color:#0f172a;
-padding:160px 40px;
-position:relative;
-overflow:hidden;
+.services {
+    background:linear-gradient(135deg,#0a0f1a,#111827);
+    color:#ffffff;
+    padding:160px 40px;
+    position:relative;
+    overflow:hidden;
 }
 
-.services::before{
-content:"";
-position:absolute;
-top:-150px;
-right:-150px;
-width:450px;
-height:450px;
-background:radial-gradient(circle,#2563eb33,transparent);
+.services::before {
+    content:"";
+    position:absolute;
+    top:-150px;
+    right:-150px;
+    width:450px;
+    height:450px;
+    background:radial-gradient(circle,#2563eb33,transparent);
 }
 
-.services h2{
-text-align:center;
-font-size:3.3rem;
-margin-bottom:20px;
-font-weight:800;
-background:linear-gradient(90deg,#1d4ed8,#2563eb);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+.services h2 {
+    text-align:center;
+    font-size:3.3rem;
+    margin-bottom:20px;
+    font-weight:800;
+    background:linear-gradient(90deg,#1d4ed8,#2563eb);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
-.services p{
-text-align:center;
-max-width:720px;
-margin:0 auto 100px;
-color:#475569;
-font-size:1.2rem;
+.services p {
+    text-align:center;
+    max-width:720px;
+    margin:0 auto 100px;
+    color:#cbd5e1;
+    font-size:1.2rem;
 }
 
-.service-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:60px;
-max-width:1200px;
-margin:auto;
+.service-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:60px;
+    max-width:1200px;
+    margin:auto;
 }
 
-.service-card{
-background:rgba(255,255,255,0.75);
-backdrop-filter:blur(14px);
-padding:60px 45px;
-border-radius:30px;
-box-shadow:0 25px 70px rgba(0,0,0,0.08);
-transition:0.5s cubic-bezier(.4,0,.2,1);
-position:relative;
-overflow:hidden;
+.service-card {
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(14px);
+    padding:60px 45px;
+    border-radius:30px;
+    box-shadow:0 25px 70px rgba(0,0,0,0.08);
+    transition:0.5s cubic-bezier(.4,0,.2,1);
+    position:relative;
+    overflow:hidden;
 }
 
-.service-card::after{
-content:"";
-position:absolute;
-bottom:0;
-left:0;
-width:100%;
-height:4px;
-background:linear-gradient(90deg,#1d4ed8,#2563eb);
-transition:0.5s;
+.service-card::after {
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:linear-gradient(90deg,#1d4ed8,#2563eb);
+    transition:0.5s;
 }
 
-.service-card:hover{
-transform:translateY(-20px) scale(1.04);
-box-shadow:0 40px 90px rgba(0,0,0,0.15);
+.service-card:hover {
+    transform:translateY(-20px) scale(1.04);
+    box-shadow:0 40px 90px rgba(0,0,0,0.15);
 }
 
-.service-card:hover::after{
-height:8px;
+.service-card:hover::after {
+    height:8px;
 }
 
 /* WHY SECTION */
-.why-section{
-margin-top:140px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:50px;
-max-width:1200px;
-margin-left:auto;
-margin-right:auto;
+.why-section {
+    margin-top:140px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:50px;
+    max-width:1200px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
-.why-box{
-background:white;
-padding:45px;
-border-radius:25px;
-box-shadow:0 20px 50px rgba(0,0,0,0.08);
-transition:0.5s;
+.why-box {
+    background:white;
+    padding:45px;
+    border-radius:25px;
+    box-shadow:0 20px 50px rgba(0,0,0,0.08);
+    transition:0.5s;
 }
 
-.why-box:hover{
-transform:translateY(-10px);
-box-shadow:0 30px 70px rgba(0,0,0,0.15);
+.why-box:hover {
+    transform:translateY(-10px);
+    box-shadow:0 30px 70px rgba(0,0,0,0.15);
 }
 
-.why-box h4{
-margin-bottom:15px;
-font-size:1.3rem;
+.why-box h4 {
+    margin-bottom:15px;
+    font-size:1.3rem;
 }
 
 /* STATS */
-.stats{
-margin-top:140px;
-display:flex;
-justify-content:space-around;
-flex-wrap:wrap;
-gap:40px;
-text-align:center;
+.stats {
+    margin-top:140px;
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    gap:40px;
+    text-align:center;
 }
 
-.stat-item h3{
-font-size:3rem;
-color:#1d4ed8;
-margin-bottom:10px;
+.stat-item h3 {
+    font-size:3rem;
+    color:#1d4ed8;
+    margin-bottom:10px;
 }
 
-.stat-item p{
-color:#475569;
-font-weight:500;
+.stat-item p {
+    color:#475569;
+    font-weight:500;
 }
 
 /* FOOTER */
-footer{
-background:#020617;
-color:#94a3b8;
-padding:50px;
-text-align:center;
+footer {
+    background:#020617;
+    color:#94a3b8;
+    padding:50px;
+    text-align:center;
 }
 
-/* FADE */
-.fade-box{
-opacity:0;
-transform:translateY(40px);
-transition:all 1s cubic-bezier(.4,0,.2,1);
+/* FADE ANIMATION */
+.fade-box {
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 1s cubic-bezier(.4,0,.2,1);
 }
 
-.fade-box.show{
-opacity:1;
-transform:translateY(0);
+.fade-box.show {
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ============================= */
+/* MEDIA QUERIES RESPONSIVE */
+@media screen and (max-width: 1024px) {
+    .hero {
+        padding-left:40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction:column;
+        padding:10px 20px;
+    }
+
+    nav div {
+        margin:10px 0;
+    }
+
+    .hero {
+        padding-left:20px;
+        text-align:center;
+    }
+
+    .hero-logo {
+        width:50%;
+        margin:0 auto 20px;
+    }
+
+    .hero h1 {
+        font-size:2rem;
+    }
+
+    .hero p {
+        font-size:1rem;
+    }
+
+    .service-grid {
+        gap:30px;
+    }
+
+    .service-card {
+        padding:30px 20px;
+    }
+
+    .why-section {
+        gap:30px;
+        padding:0 10px;
+    }
+
+    .stats {
+        gap:20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-logo {
+        width:70%;
+    }
+
+    .hero h1 {
+        font-size:1.6rem;
+    }
+
+    .service-card h3 {
+        font-size:1.2rem;
+    }
+
+    .service-card p {
+        font-size:0.9rem;
+    }
+
+    .nav-link, .nav-btn {
+        font-size:14px;
+        margin:5px 0;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<nav style="position:fixed; top:0; width:100%; z-index:1000;
-padding:18px 60px; display:flex; align-items:center;
-background:rgba(2,6,23,0.55); backdrop-filter:blur(10px);">
-
-<div style="position:absolute; left:60px; font-weight:bold; font-size:1.4rem;">
-ANDAL DINAMIK
-</div>
-
+<!-- NAVBAR -->
+<nav>
+<div style="position:absolute; left:60px; font-weight:bold; font-size:1.4rem;">ANDAL DINAMIK</div>
 <div style="margin:0 auto; display:flex; align-items:center;">
 <a href="#" class="nav-link">Home</a>
 <a href="#services" class="nav-link">Services</a>
@@ -237,16 +310,15 @@ ANDAL DINAMIK
 <a href="contact.html" class="nav-btn">Contact Us</a>
 <a href="portfolio.html" class="nav-btn">Portfolio</a>
 </div>
-
 </nav>
 
-
+<!-- HERO SECTION -->
 <section class="hero">
 <div style="max-width:720px;">
-<img src="adsb.jpg" class="fade-box hero-logo" style="width:25%; max-width:500px;">
+<img src="adsb.jpg" class="fade-box hero-logo">
 <p class="fade-box" style="letter-spacing:3px;font-size:0.95rem;">YOUR PARTNER FOR INNOVATION</p>
-<h1 class="fade-box" style="font-size:4.5rem;margin:0;">Empowering Innovation.</h1>
-<h1 class="fade-box" style="font-size:4.5rem;background:#1d4ed8;display:inline-block;padding:12px 22px;border-radius:12px;margin-top:10px;">Driving Excellence</h1>
+<h1 class="fade-box" style="margin:0;">Empowering Innovation.</h1>
+<h1 class="fade-box" style="background:#1d4ed8;display:inline-block;padding:12px 22px;border-radius:12px;margin-top:10px;">Driving Excellence</h1>
 <div class="fade-box" style="margin-top:50px;">
 <a href="#services" style="background:#2563eb;padding:18px 40px;border-radius:50px;color:white;text-decoration:none;font-weight:bold;">Find Service →</a>
 <a href="contact.html" style="margin-left:25px;padding:18px 40px;border-radius:50px;border:2px solid #facc15;color:#facc15;text-decoration:none;font-weight:bold;">Contact Us</a>
@@ -254,10 +326,10 @@ ANDAL DINAMIK
 </div>
 </section>
 
-<!-- SERVICES SECTION - Dark Theme Only -->
-<section id="services" class="services" style="background: linear-gradient(135deg,#0a0f1a,#111827);">
+<!-- SERVICES SECTION -->
+<section id="services" class="services">
 <h2 class="fade-box">What We Do</h2>
-<p class="fade-box" style="color:#cbd5e1;">
+<p class="fade-box">
 Kami menyediakan solusi menyeluruh berasaskan teknologi, profesionalisme dan kualiti bertaraf industri dengan pendekatan strategik dan inovatif.
 </p>
 
@@ -304,12 +376,13 @@ Kami menyediakan solusi menyeluruh berasaskan teknologi, profesionalisme dan kua
 <div class="stat-item"><h3>10+</h3><p>Years Experience</p></div>
 </div>
 </section>
-<!-- END SERVICES SECTION -->
 
+<!-- FOOTER -->
 <footer class="fade-box">
 © 2026 Andal Dinamik. All Rights Reserved.
 </footer>
 
+<!-- FADE ANIMATION SCRIPT -->
 <script>
 const observer = new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
@@ -326,10 +399,3 @@ observer.observe(el);
 
 </body>
 </html>
-
-
-
-
-
-
-
